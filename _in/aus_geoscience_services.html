@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<title>Geoscience Australia Web Services</title>
+		<meta charset="UTF-8">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div style="padding:10px;border: 1px none black">
+			<div id="header">
+				<img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg" width="125px" style="float:left;margin-right:25px;">
+				<h3>Applying geoscience to Australia's most important challenges</h3>
+			</div>
+			
+			<div id="searchBar">
+			<!--<div style="width:75%;margin-left:auto;margin-right:auto;">-->
+				<div style="padding-top:20px;width:75%;margin:auto;position:relative;top:0;bottom:0;right:0;left:0;">
+					<input type="text" id="searchField"/>
+					<button class="searchBtn" onclick="search(this)">Search</button>
+					<button class="searchBtn" onclick="reset()">Reset</button>
+				</div>
+			</div>
+			</br>
+               <p style="color:rgb(0,0,0)" class="text-left">Geoscience Australia provides web services for public use that allow access to our data without having to store datasets locally. Geoscience Australia supports a variety of web service protocols, including Open Geospatial Consortium (OGC) services and ESRI mapping and image services.
+         <h2>Service Updates</h2>
+         As new services are added or decommissioned you can get updates on the following channels.
+         <ul>
+             <li>Services Page</li>
+             <li>Twitter: <a href="https://twitter.com/geoausdata">@geoausdata</a></li>
+             <li>Email Updates: <input id="emailInput" type="text" width="400"></input><button onclick="subscribe()">Subscribe</button></li>
+         </ul>
+          <h2>Filter Tools</h2>
+          Use the following filters to help find a service. 
+         </p>
+               <p style="color:rgb(0,0,0)" class="text-left"><p>Use the below to filter services based on capability or use the search:</p>
+         <select id="filterSelect" onchange="hide()">
+             <option>All</option>
+             <option>New</option>
+             <option>Decommission</option>
+             <option>ESRI: Map Service</option>
+             <option>OGC:WMS</option>
+             <option>OGC:WCS</option>
+             <option>OGC:WFS</option>
+             <option>OGC:WMTS</option>
+         </select>
+         <br/>
+		 </br>
+       
+             <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          AMSIS Distance To GPServer
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://www.ga.gov.au/gisgp/rest/services/marine_coastal/AMSIS_DistanceTo_Service/GPServer" target="_blank">ESRI:ArcGIS:GPServer</a></p>
+                    <p style="width:330px;">The AMSIS Distance To tool calculates the distance to a selected marine feature. The output is the distance to the nearest feature from the given location.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          AREMI Buildings (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/AREMI_Buildings_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/AREMI_Buildings_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/rest/services/AREMI_Buildings_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service shows areas or locations occupied by an existing high-density urban development or known individual building structures in peri-urban and remote locations. Data used in this service is of varying levels of coverage and quality since it is aggregated from a variety of sources. 
+The intended purpose of the service is to provide preliminary, first-pass information about urban environment, building structures and their distribution i...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          AUSIMAGE Aerial Imagery Canberra 2014
+                        </div>
+                        <div class="tilePic">
+                                <img src="https://ga-ecat-thumbnails.s3.amazonaws.com/100922/100922.png"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Ausimage_Canberra_2014/ImageServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Ausimage_Canberra_2014/ImageServer" target="_blank">ESRI:ArcGIS:ImageServer</a></p>
+                    <p style="width:330px;">AUSIMAGE Aerial Imagery Canberra 2014 is a web service of high resolution aerial imagery (10 cm to 18 cm) over Canberra and Queanbeyan, acquired in February and April 2014.  AUSIMAGE Aerial Imagery is a data product of Jacobs Group (Australia) Pty Ltd, released by Geoscience Australia as a web map service under license agreement.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Acreage Release - Marine Environmental Data
+                        </div>
+                        <div class="tilePic">
+                                <img src="https://ga-ecat-thumbnails.s3.amazonaws.com/100053/100053.png"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Acreage_Release_Environmental_Data/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Acreage_Release_Environmental_Data/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This is the Acreage Release Marine Environmental Data compiled web service to be updated each year with acreage release. It contains the following publicly available datasets, for the 2016 Acreage Release - Marine Survey Towed-video Transects, Marine Sediments Database Samples, Australian Seascapes, Seabed Mud Content on the Northwest Shelf, Seabed Sand Content of the Northwest Shelf and Seabed Gravel Content of the Northwest Shelf.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Bathymetry and Topography
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Bathymetry_Topography/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Bathymetry_Topography/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Bathymetry_Topography/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Bathymetry_Topography/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a></p>
+                    <p style="width:330px;">The Australian Bathymetry and Topography web service includes the topography of Australia and the bathymetry of the adjoining Australian Exclusive Economic Zone. The area selected does not include data from Australia's marine jurisdiction offshore from the Territory of Heard and McDonald Islands and the Australian Antarctic Territory. The 2009 bathymetry data were compiled by Geoscience Australia from multibeam and single beam data, and along wit...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Coastal Geomorphology Depositional Environment (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Geomorphology_Environment_WM/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/services/Geomorphology_Environment_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Geomorphology_Environment_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/rest/services/Geomorphology_Environment_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a></p>
+                    <p style="width:330px;">The service contains the Australian Coastal Geomorphology Environments, used to support a national coastal risk assessment. It describes the location and extent primary geomorphological environments (both dispositional and erosional) present along the Australia coast and the processes acting on the features within. It is cached service with a Web Mercator Projection.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Coastal Geomorphology Landform Subtype (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Geomorphology_Landform_Subtype_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Geomorphology_Landform_Subtype_WM/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/services/Geomorphology_Landform_Subtype_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Geomorphology_Landform_Subtype_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/rest/services/Geomorphology_Landform_Subtype_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a></p>
+                    <p style="width:330px;">The service contains the Australian Coastal Geomorphology Landform Subtype Classifications, used to support a national coastal risk assessment. It describes the location and extent of landform subtypes identifiable at scales between 1:25,000 and 1:10,000. It also provides further detail to the Landform Type, with particular reference to feature stability (e.g. dune types) and mobility (e.g. channel types). It is cached service with a Web Mercator...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Coastal Geomorphology Landform Type (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Geomorphology_Landform_Type_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Geomorphology_Landform_Type_WM/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/services/Geomorphology_Landform_Type_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Geomorphology_Landform_Type_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/rest/services/Geomorphology_Landform_Type_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a></p>
+                    <p style="width:330px;">The service contains the Australian Coastal Geomorphology Landform Subtype Classifications, used to support a national coastal risk assessment. It describes the location and extent of landform subtypes identifiable at scales between 1:25,000 and 1:10,000. It also provides further detail to the Landform Type, with particular reference to feature stability (e.g. dune types) and mobility (e.g. channel types). It is cached service with a Web Mercator...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Coastal Geomorphology Scale Guide (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Geomorphology_Scale_Guide_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Geomorphology_Scale_Guide_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/services/Geomorphology_Scale_Guide_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Geomorphology_Scale_Guide_WM/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Geomorphology_Scale_Guide_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The service contains the Australian Coastal Geomorphology Scale Guide, used to support a national coastal risk assessment. It includes the extents of various reclassified costal mapping products. It is cached service with a Web Mercator Projection.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Coastal Geomorphology Smartline
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Geomorphology_Smartline/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Geomorphology_Smartline/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Geomorphology_Smartline/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">The service contains the Australian Coastal Geomorphology Smartline, used to support a national coastal risk assessment. The 'Smartline' is a representation of the geomorphic features located within 500m of the shoreline, denoted by the high water mark. The service includes geomorphology themes and stability classes.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Coastal Sediment Compartments
+                        </div>
+                        <div class="tilePic">
+                                <img src="https://ga-ecat-thumbnails.s3.amazonaws.com/90089/90089.png"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Australian_Coastal_Sediment_Compartments/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Australian_Coastal_Sediment_Compartments/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Australian_Coastal_Sediment_Compartments/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a></p>
+                    <p style="width:330px;">The Australian Coastal Sediment Compartments Web Service provide a hierarchical spatial classification relevant to the assessment of sediment movement in the Australian coastal zone, and represent a tool to assist coastal planning and management.  Additional spatial data layers produced during the development of the compartments are provided for reference.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Land Cover (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/services/Land_Cover_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The Land Cover map service includes information derived from the Dynamic Land Cover Dataset (2000-2008) containing Enhanced Vegetation Index (EVI) information. The service provides a base-line for identifying and reporting on change and trends in vegetation cover and extent. It is a cached service with a Web Mercator Projection.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Shoreline (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Shoreline_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Shoreline_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/services/Shoreline_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Shoreline_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The service includes an outline of the Australian shoreline. The information was derived from the Geodata 3 Topographic 250K 2007 data, with a nominal scale of 1:250,000. It is a cached service with a Web Mercator Projection.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Submarine Canyons
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Submarine_Canyons/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/services/Submarine_Canyons/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Submarine_Canyons/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The Australian Submarine Canyons service identifies the location of 753 submarine canyons surrounding mainland Australia and its external territories, with associated metrics.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Surface Hydrology (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Surface_Hydrology_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Surface_Hydrology_WM/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Surface_Hydrology_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Surface_Hydrology_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Surface_Hydrology_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a></p>
+                    <p style="width:330px;">This service provides Australian surface hydrology, including natural and man-made features such as water courses (including directional flow paths), lakes, dams and other water bodies. The information was derived from the Surface Hydrology database, with a nominal scale of 1:250,000. The National Basins and Catchments are a national topographic representation of drainage areas across the landscape. Each basin is made up of a number of catchments...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Australian Topographic Base Map (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Topographic_Base_Map_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Topographic_Base_Map_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Topographic_Base_Map_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Topographic_Base_Map_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a></p>
+                    <p style="width:330px;">The Australian Topographic base map service is seamless national dataset coverage for the whole of Australia. The map is a representation of the Geoscience Australia 250k topographic specification and portrays a detailed graphic representation of features that appear on the Earth's surface. These features include cultural, hydrography and relief themes. The service contains layer scale dependencies.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Bathymetry Derivatives Map of Australia
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Bathymetry_Derivatives/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Bathymetry_Derivatives/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Bathymetry_Derivatives/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The National Bathymetry Derivatives Map of Australia Web Map Service contains national scale bathymetric derivatives - hillshaded bathymetry and topography, slope, aspect, topographic relief and topographic rugosity, which are available for download on Geoscience Australia's website. These bathymetric derivatives have been derived from the Australian Bathymetry and Topography Grid, June 2009. Each dataset is gridded to 9 arc second resolution (i....</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Borehole Samples
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/geoserver/borehole_samples/wms?service=WMS&request=GetCapabilities" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/geoserver/borehole_samples/wfs?service=WFS&version=1.0.0&request=GetCapabilities" target="_blank">OGC:WFS</a></p>
+                    <p style="width:330px;">This is an Open Geospatial Consortium (OGC) web service providing access to a subset of Australian geoscience samples data held by Geoscience Australia. The subset currently relates specifically to Australian Boreholes.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Boreholes
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/geoserver/boreholes/wms?service=WMS&request=GetCapabilities" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/geoserver/boreholes/ows?service=WFS&request=GetCapabilities" target="_blank">OGC:WFS</a></p>
+                    <p style="width:330px;">This is an Open Geospatial Consortium (OGC) web service providing access to Australian onshore and offshore borehole data.  This web service is intended to complement the borehole GeoSciML-Portrayal v4.0 web service, providing access to the data in a simple, non-standardised structure.  The borehole data includes Mineral Drillholes, Petroleum Wells and Water Bores along with a variety of others types.   The dataset has been restricted to onshore ...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Boreholes, Geoscience Australia (GeoSciML-Portrayal v4.0)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/geoserver/gsmlp/wms?service=WMS&request=GetCapabilities" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/geoserver/gsmlp/wfs?service=WFS&request=GetCapabilities" target="_blank">OGC:WFS</a></p>
+                    <p style="width:330px;">This is an Open Geospatial Consortium (OGC) web service providing access to Australian onshore and offshore borehole data conforming to the GeoSciML version 4.0 specification.  The borehole data includes Mineral Drillholes, Petroleum Wells and Water Bores along with a variety of others types.   The dataset has been restricted to onshore and offshore Australian boreholes, and bores that have the potential to support geological investigations and a...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Browse Basin Marine Survey, 2014 (GA-0345,GA-0346 and TAN1411) - High Resolution Bathymetry Grids
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Browse_Basin_Bathymetry_2014_GA0345_GA0346_TAN1411/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Browse_Basin_Bathymetry_2014_GA0345_GA0346_TAN1411/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Browse_Basin_Bathymetry_2014_GA0345_GA0346_TAN1411/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Browse_Basin_Bathymetry_2014_GA0345_GA0346_TAN1411/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service displays the results of a marine survey conducted by Geoscience Australia in Commonwealth waters of the north-eastern Browse Basin (Caswell Sub-basin) between 9 October and 9 November 2014. The additional codes GA-0345 and GA-0346 refer to Geoscience Australia (GA) internal codes and TAN1411 is the vessel survey number given by the RV Tangaroa for 2014.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          CIAP Tile Index System
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/CIAP_Tile_Index_System/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/CIAP_Tile_Index_System/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/CIAP_Tile_Index_System/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The Carbon Infrastructure Assessment and Planning (CIAP) Tile Index System is a set of nested tile indexes from 1:25000 through to 1:10000000 scales based on the ICSM map indexes.  The product has been generated for use at national scale based in GDA94 projection.  This product supports the best available information system (BAIS)as used by the CIAP application.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          CO2 Storage gauge 800m below Bathymetry and Topography
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://www.ga.gov.au/arcgis/services/Maps/CO2_Storage_gauge_800m_below_depth_Bathymetry_Topography/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://www.ga.gov.au/arcgis/services/Maps/CO2_Storage_gauge_800m_below_depth_Bathymetry_Topography/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a></p>
+                    <p style="width:330px;">This service is designed to be used within the Carbon Capture and Storage application for a 3D visual representation. It is an elevation service that represents 800m below the Digital Elevation Model (DEM) Shuttle Radar Topography Mission (SRTM) 1 Second over Australian Bathymetry Topography service. This is used as a basic gauge as to determine where CO2 should have enough pressure to be converted into a super fluid.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          CWTH OPGGSA 2006 Petroleum Blocks AMB2006a
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2006a/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2006a/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2006a/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2006a/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2006a/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a></p>
+                    <p style="width:330px;">Petroleum Blocks cut to the AMB 2006a epoch. This dataset is a digital realisation of the Blocks as defined under Section 33 (3) of the Offshore Petroleum and Greenhouse Gas Storage Act 2006. The blocks are created using a 5 minute by 5 minute graticular section that has been trimmed to the extent of the Offshore Area (defined in the same Act). The dataset is comprised of both points and polygons, and is densified to ensure the geometry will rema...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Carbon Capture Storage Basins
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://www.ga.gov.au/arcgis/services/Maps/Carbon_Capture_Storage_Basins/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://www.ga.gov.au/arcgis/rest/services/Maps/Carbon_Capture_Storage_Basins/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This polygon dataset contains the sedimentary basins of Australia ranked by their CO2 storage potential. See the National Carbon Mapping and Infrastructure Plan Australia report for details.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Casey Station Bathymetry Survey 2014-2015 (GA0348-AAD3326) - High Resolution Bathymetry Grids
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Casey_Station_Bathymetry_Survey_2014_2015_GA0348_AAD3326/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Casey_Station_Bathymetry_Survey_2014_2015_GA0348_AAD3326/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Casey_Station_Bathymetry_Survey_2014_2015_GA0348_AAD3326/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Casey_Station_Bathymetry_Survey_2014_2015_GA0348_AAD3326/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service contains the Casey Station Bathymetry survey that displays one seamless bathymetry grid of 1m resolution. The GA-0348 survey, acquired by Geoscience Australia, Royal Australian Navy and Australian Antarctic Division (AAD) on-board the Research Vessel Howard Burton from the 23rd of December 2014 to the 27th of January 2015. Further details of the data lineage can be found with the associated database.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Casey Station Bathymetry Surveys 2013-2015 (GA4415, GA0348-AAD3326) - High Resolution Bathymetry Grid
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Casey_Station_Bathymetry_Surveys_2013_2015_GA4415_GA0348_AAD3326/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Casey_Station_Bathymetry_Surveys_2013_2015_GA4415_GA0348_AAD3326/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Casey_Station_Bathymetry_Surveys_2013_2015_GA4415_GA0348_AAD3326/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/services/Casey_Station_Bathymetry_Surveys_2013_2015_GA4415_GA0348_AAD3326/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This web service combines two surveys GA-4415 and GA-0348. The Casey Station Bathymetry survey displays one seamless bathymetry grid of 1m resolution. Further details of the data lineage can be found with the associated database. This web service is published with the permission of the CEO, Geoscience Australia.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Clip And Zip GPServer
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://www.ga.gov.au/arcgis/rest/services/Geoprocessing/ClipAndZip/GPServer" target="_blank">ESRI:ArcGIS:GPServer</a></p>
+                    <p style="width:330px;">The Clip and Zip tool takes an input polygon extent as WKT input and clips required featureclasses listed. The data is referenced from its own database with all layers projected to 4326 spatial reference. The output is a zipped file geodatabase with a copyright text file included.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Commonwealth - Coastal Waters (State Powers) Act 1980 and Coastal Water (Northern Territory) Powers Act 1980 - epoch AMB2014a
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/CWTH_CW_Act_1980_Coastal_Waters_AMB2014a/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/CWTH_CW_Act_1980_Coastal_Waters_AMB2014a/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/CWTH_CW_Act_1980_Coastal_Waters_AMB2014a/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/CWTH_CW_Act_1980_Coastal_Waters_AMB2014a/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service contains the limit and extent of Section 3 of the Coastal Waters (State Powers) Act 1980, and the Coastal Waters (Northern Territories Powers) Act 1980. NOTE: the Polygon depicting the area of the coastal waters is not constrained on the landward side. The polygon includes areas that fall within the constitutional limits of the States. When information depicting the landward constitutional limit of the States becomes available, the p...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Commonwealth - Offshore Minerals Act 1994 - Mineral Blocks - epoch AMB2006a (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/CWTH_OMA_1994_Mineral_Blocks_AMB2006a_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/CWTH_OMA_1994_Mineral_Blocks_AMB2006a_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/CWTH_OMA_1994_Mineral_Blocks_AMB2006a_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/CWTH_OMA_1994_Mineral_Blocks_AMB2006a_WM/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/CWTH_OMA_1994_Mineral_Blocks_AMB2006a_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a></p>
+                    <p style="width:330px;">The Commonwealth - Offshore Minerals Act 1994 - Mineral Blocks - epoch AMB2006a service displays the Australian Mineral Blocks (2006) - Aligned with the current Australian Maritime Boundary Dataset (AMB2006). Refer to the metadata of the geodatabase for a detailed abstract relating to the data.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Commonwealth - Offshore Minerals Act 1994 - Mineral Blocks - epoch AMB2014a (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/CWTH_OMA_1994_Mineral_Blocks_AMB2014a_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/CWTH_OMA_1994_Mineral_Blocks_AMB2014a_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/rest/services/CWTH_OMA_1994_Mineral_Blocks_AMB2014a_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/CWTH_OMA_1994_Mineral_Blocks_AMB2014a_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/CWTH_OMA_1994_Mineral_Blocks_AMB2014a_WM/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a></p>
+                    <p style="width:330px;">The Commonwealth - Offshore Minerals Act 1994 - Mineral Blocks - epoch AMB2014a (Web Mercator) service displays the Australian Mineral Blocks (2014) - Aligned with the current Australian Maritime Boundary Dataset (AMB2014). Refer to the metadata of the geodatabase for a detailed abstract relating to the data.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Commonwealth - Offshore Petroleum and Greenhouse Gas Storage Act 2006 - Petroleum Blocks - epoch AMB2001a
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2001a/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2001a/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2001a/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2001a/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/rest/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2001a/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a></p>
+                    <p style="width:330px;">Petroleum Blocks cut to the AMB 2001a epoch. The service contains the Blocks as defined under Section 33 (3) of the Offshore Petroleum and Greenhouse Gas Storage Act 2006. Coverage includes indicative areas of coastal waters and land, within the constitutional limits of the States and territories.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Commonwealth - Offshore Petroleum and Greenhouse Gas Storage Act 2006 - Petroleum Blocks - epoch AMB2014a
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2014a/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2014a/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2014a/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2014a/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/rest/services/CWTH_OPGGSA_2006_Petroleum_Blocks_AMB2014a/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a></p>
+                    <p style="width:330px;">Petroleum Blocks cut to the AMB 2014a epoch. The service contains the Blocks as defined under Section 33 (3) of the Offshore Petroleum and Greenhouse Gas Storage Act 2006. Coverage includes indicative areas of coastal waters and land, within the constitutional limits of the States and territories.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Commonwealth - Offshore Petroleum and Greenhouse Gas Storage Act 2006 - epoch AMB2014a
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/CWTH_OPGGSA_2006_AMB2014a/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/CWTH_OPGGSA_2006_AMB2014a/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/CWTH_OPGGSA_2006_AMB2014a/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/CWTH_OPGGSA_2006_AMB2014a/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service contains features as defined under the Offshore Petroleum and Greeenhouse Gas Storage Act 2006.  The Petroleum blocks defined under the Act, are delivered separately in the 'Commonwealth - Offshore Petroleum and Greenhouse Gas Storage Act 2006 - Petroleum Blocks - epoch AMB2001a' service.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Commonwealth - Seas and Submerged Lands Act 1973 - epoch AMB2014a
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/SSLA_1973_AMB2014a/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/SSLA_1973_AMB2014a/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/SSLA_1973_AMB2014a/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/SSLA_1973_AMB2014a/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The service depicts the proclamations made under the Seas and Submerged Lands Act (SSLA) 1973.  This includes the continental shelf, the Exclusive Economic Zone (EEZ), territorial sea and territorial sea baselines. 
+NOTE: Two versions of the Exclusive Economic Zone (EEZ) are supplied to account for the discrepancy between Seas and Submerged Lands Act 1973. The Proclamation under section 10B (26/07/1994), and unratified Treaty between the Governme...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Commonwealth - Seas and Submerged Lands Act 1973 - epoch AMB2014a (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/SSLA_1973_AMB2014a_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/SSLA_1973_AMB2014a_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/rest/services/SSLA_1973_AMB2014a_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/SSLA_1973_AMB2014a_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">The service depicts the proclamations made under the Seas and Submerged Lands Act (SSLA) 1973.  This includes the continental shelf, the Exclusive Economic Zone (EEZ), territorial sea and territorial sea baselines. 
+NOTE: Two versions of the Exclusive Economic Zone (EEZ) are supplied to account for the discrepancy between Seas and Submerged Lands Act 1973. The Proclamation under section 10B (26/07/1994), and unratified Treaty between the Governme...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Criteria Assessment GPServer
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://www.ga.gov.au/arcgis/rest/services/Geoprocessing/CriteriaAssessment/GPServer" target="_blank">ESRI:ArcGIS:GPServer</a></p>
+                    <p style="width:330px;">The Criteria Assessment tool takes the input path or area created by the user and the input variables chosen to generate a heat map surface, KML surface, KMZ surface and PDF Report. This service is specifically for use within the Carbon Capture and Storage application.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Criteria Assessment geoprocessing inputs
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://www.ga.gov.au/arcgis/services/Maps/Criteria_Assessment_geoprocessing_inputs/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://www.ga.gov.au/arcgis/rest/services/Maps/Criteria_Assessment_geoprocessing_inputs/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service is the processing inputs that are used within the Criteria Assessment geoprocessing service. This service is specifically for use within the Carbon Capture and Storage application.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          DMCii Mosaic Image
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/DMCii_Mosaic/ImageServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/DMCii_Mosaic/ImageServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/rest/services/DMCii_Mosaic/ImageServer" target="_blank">ESRI:ArcGIS:ImageServer</a> | <a href="http://services.ga.gov.au/gis/services/DMCii_Mosaic/ImageServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">The DMCii Mosaic service presents a sample of imagery captured by UK2-DMC satellite between December 2011 and April 2012.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Defence Restricted Areas
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Defence_Restricted_Areas/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Defence_Restricted_Areas/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Defence_Restricted_Areas/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">Defence Prohibited and Training Areas. This data approximates the locations of Defence prohibited and training areas. Data included in this service is indicative only and should not be used for detailed planning. 
+For 10.2 Server 2016</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Developing Northern Australia White Paper Boundary June 2015
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Developing_Northern_Australia_White_Paper_Boundary_June_2015/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Developing_Northern_Australia_White_Paper_Boundary_June_2015/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/services/Developing_Northern_Australia_White_Paper_Boundary_June_2015/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Developing_Northern_Australia_White_Paper_Boundary_June_2015/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service contains the limit and extent of Northern Australia as indicated in the 2015 White Paper on Developing Northern Australia. (see http://northernaustralia.gov.au/page/publications)</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Digital Elevation Model (DEM) Shuttle Radar Topography Mission (SRTM) 1 Second over Australian Bathymetry Topography
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/DEM_SRTM_1Second_over_Bathymetry_Topography/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/DEM_SRTM_1Second_over_Bathymetry_Topography/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/DEM_SRTM_1Second_over_Bathymetry_Topography/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/services/DEM_SRTM_1Second_over_Bathymetry_Topography/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service represents a combination of two data products, the DEM_SRTM_1Second dataset and the Australian_Bathymetry_Topography dataset. This service was created to support the CO2SAP (Co2 Storage application) Project to create a transect elevation graph within the application.  This data is not available as a dataset for download as a Geoscience Australia product.
+The DEM_SRTM_1Second service represents the National Digital Elevation Model (DE...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Digital Elevation Model (DEM) of Australia derived from LiDAR 25 Metre Grid
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/DEM_LiDAR_25m/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/DEM_LiDAR_25m/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/services/DEM_LiDAR_25m/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/DEM_LiDAR_25m/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This Service represents the 25 metre Digital Elevation Model (DEM), with national coverage. It is derived from merged LiDAR and various projects. New data will be added to the service as it becomes available.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Digital Elevation Model (DEM) of Australia derived from LiDAR 5 Metre Grid
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/DEM_LiDAR_5m/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/DEM_LiDAR_5m/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/services/DEM_LiDAR_5m/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/DEM_LiDAR_5m/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This Service represents the 5 metre Digital Elevation Model (DEM), with national coverage. It is derived from merged LiDAR and various projects. New data will be added to the service as it becomes available.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Digital Elevation Model (DEM) of Australia derived from SRTM with 1 Second Grid - Smoothed Aspect
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/DEM_SRTM_1Second_Aspect/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/DEM_SRTM_1Second_Aspect/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/DEM_SRTM_1Second_Aspect/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/services/DEM_SRTM_1Second_Aspect/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service represents the National Digital Elevation Model (DEM) 1 Second Smoothed Aspect product, derived from the National Smoothed Digital Elevation Model SRTM 1 Second. Aspect measures the direction in which a land surface slope faces. The direction is expressed in degrees from north.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Digital Elevation Model (DEM) of Australia derived from SRTM with 1 Second Grid - Smoothed Percentage Slope
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/site_13/rest/services/DEM_SRTM_1Second_Slope/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/DEM_SRTM_1Second_Slope/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/services/DEM_SRTM_1Second_Slope/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/DEM_SRTM_1Second_Slope/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service represents the National Digital Elevation Model (DEM) 1 Second Percentage Slope product, derived from the National DEM SRTM 1 Second. Slope measures the inclination of the land surface from the horizontal. Percent slope represents this inclination as the ratio of change in height to distance.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Digital Elevation Model (DEM) of Australia derived from STRM with 1 Second Grid - Hydrologically Enforced
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/DEM_SRTM_1Second_Hydro_Enforced/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/DEM_SRTM_1Second_Hydro_Enforced/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/services/DEM_SRTM_1Second_Hydro_Enforced/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/DEM_SRTM_1Second_Hydro_Enforced/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This Service represents the National DEM 1 Second Hydrologically Enforced product derived from the National DEM SRTM 1 Second and National Watercourses, lakes and Reservoirs</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Digital Elevation Model (DEM) of Australia with 1 Second Grid
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/DEM_SRTM_1Second/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/DEM_SRTM_1Second/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/services/DEM_SRTM_1Second/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/DEM_SRTM_1Second/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service represents the National Digital Elevation Model (DEM) 1 Second product derived from the National DEM SRTM 1 Second. The DEM represents ground surface topography, with vegetation features removed using an automatic process supported by several vegetation maps.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Dynamic National Map Cultivated and Native Vegetation
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NM_Cultivated_and_Native_Vegetation/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NM_Cultivated_and_Native_Vegetation/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NM_Cultivated_and_Native_Vegetation/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service has been created specifically for display in the National Map and the chosen symbology may not suit other mapping applications. The Australian Topographic map service is seamless national dataset coverage for the whole of Australia. These data are best suited to graphical applications. These data may vary greatly in quality depending on the method of capture and digitising specifications in place at the time of capture. The web map s...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Dynamic National Map Culture and Infrastructure
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NM_Culture_and_Infrastructure/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NM_Culture_and_Infrastructure/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NM_Culture_and_Infrastructure/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service has been created specifically for display in the National Map and the chosen symbology may not suit other mapping applications. The Australian Topographic web map service is seamless national dataset coverage for the whole of Australia. These data are best suited to graphical applications. These data may vary greatly in quality depending on the method of capture and digitising specifications in place at the time of capture. The web m...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Dynamic National Map Hydrology and Marine
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Lines/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NM_Hydrology_and_Marine/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service has been created specifically for display in the National Map and the symbology displayed may not suit other mapping applications. The service includes natural and man-made surface hydrology features, such as water courses (including directional flow paths), lakes, dams and other water bodies and marine themes.  The data is sourced from Geoscience Australia 250K Topographic data and Surface Hydrology data. The service contains layer ...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Dynamic National Map Hydrology and Marine - Lines
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Lines/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NM_Hydrology_and_Marine_Lines/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Lines/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service has been created specifically for display in the National Map and the symbology displayed may not suit other mapping applications. Information included within the service includes the linear locations for surface hydrology, including natural and man-made features such as water courses (including directional flow paths), lakes, dams and other water bodies and marine themes.  The data is sourced from Geoscience Australia 250K Topograph...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Dynamic National Map Hydrology and Marine - Points
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Points/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Points/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/NM_Hydrology_and_Marine_Points/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service has been created specifically for display in the National Map and the symbology displayed may not suit other mapping applications. Information included within the service includes the point locations for surface hydrology, including natural and man-made features such as water courses (including directional flow paths), lakes, dams and other water bodies and marine themes.  The data is sourced from Geoscience Australia 250K Topographi...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Dynamic National Map Hydrology and Marine - Polygons
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Polygons/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Polygons/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/NM_Hydrology_and_Marine_Polygons/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service has been created specifically for display in the National Map and the symbology displayed may not suit other mapping applications. Information included within the service includes the polygon/area locations for surface hydrology, including natural and man-made features such as water courses (including directional flow paths), lakes, dams and other water bodies and marine themes.  The data is sourced from Geoscience Australia 250K Top...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Dynamic National Map Labelling and Boundaries
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NM_Labelling_and_Boundaries/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NM_Labelling_and_Boundaries/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NM_Labelling_and_Boundaries/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service has been created specifically for display in the National Map and the chosen symbology may not suit other mapping applications. These data are best suited to graphical applications. These data may vary greatly in quality depending on the method of capture and digitising specifications in place at the time of capture. The Australian Topographic web map service is seamless national dataset coverage for the whole of Australia. The map p...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Dynamic National Map Relief and Physiography
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NM_Relief_and_Physiography/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NM_Relief_and_Physiography/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NM_Relief_and_Physiography/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service has been created specifically for display in the National Map and the chosen symbology may not suit other mapping applications. The Australian Topographic web map service is seamless national dataset coverage for the whole of Australia. These data are best suited to graphical applications. These data may vary greatly in quality depending on the method of capture and digitising specifications in place at the time of capture. The web m...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Dynamic National Map Reserves
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NM_Reserves/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NM_Reserves/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NM_Reserves/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service has been created specifically for display in the National Map and the chosen symbology may not suit other mapping applications. The Australian Topographic web map service is seamless national dataset coverage for the whole of Australia. These data are best suited to graphical applications. These data may vary greatly in quality depending on the method of capture and digitising specifications in place at the time of capture. The web m...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Dynamic National Map Transport Infrastructure
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NM_Transport_Infrastructure/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service has been created specifically for display in the National Map and the chosen symbology may not suit other mapping applications. The Australian Topographic web map service is seamless national dataset coverage for the whole of Australia. These data are best suited to graphical applications. These data may vary greatly in quality depending on the method of capture and digitising specifications in place at the time of capture. The web m...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Expected Australian Earthquake Hazard (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Earthquake_Hazard_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Earthquake_Hazard_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Earthquake_Hazard_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The service contains the 2013 Earthquake Hazard map, as a raster and contours. This map shows the peak ground acceleration (response spectral period of 0.01 seconds) on rock expected for a 500 year return period, in units of g, evaluated for the geometric mean of the horizontal components. The map is the closest in return period and response spectral period to the current earthquake hazard map in the Australian Standard AS1170.4-2007.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          GA Surface Geology of Australia
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/GA_Surface_Geology/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/GA_Surface_Geology/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/GA_Surface_Geology/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/rest/services/GA_Surface_Geology/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The Surface Geology web map service provides two seamless national coverages of Australian bedrock and surficial geology, compiled at 1:1 million scale (displays only at scales less than 1:1500000), and 1:2.5 million scale (displays only at scales greater than 1:1500000). It also contains 1:5 million scale geological regions and metamorphic geology.  The service represents outcropping or near-outcropping bedrock units, and unconsolidated or poorl...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Gazetteer of Australia
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Australian_Gazetteer/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Australian_Gazetteer/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Australian_Gazetteer/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/services/Australian_Gazetteer/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">The Australian Gazetteer service provides authoritative information on the location, and spelling of approved place names. The Australian Gazetteer is a subset of information held by the relevant State, Territory and Commonwealth naming authorities. Additional authoritative information has also been sourced from the Australian Hydrographic Service, Australian Antarctic Division and Geoscience Australia.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Geological Provinces 2013
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Geological_Provinces_2013/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Geological_Provinces_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Geological_Provinces_2013/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The Australian Geological Provinces web map service contains descriptions of the fundamental geological elements of the Australian continent and offshore surrounds. Province types include sedimentary basins, tectonic provinces such as cratons and orogens, igneous provinces, and metallogenic provinces. Spatial data has been captured largely at approximately 1:1M scale for intended use between 1:2M and 1:5M scale. The full 2D spatial extent (i.e. i...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Geomorphic Features of Australia's Marine Jurisdiction
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Marine_Geomorphic_Features/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Marine_Geomorphic_Features/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Marine_Geomorphic_Features/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Marine_Geomorphic_Features/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">The Geomorphic Features of Australia's Marine Jurisdiction web service brings together various datasets produced by Geoscience Australia that describe the distribution and types of geomorphic features found on the seabed of Australia's marine jurisdiction. This jurisdiction covers Australia's Exclusive Economic Zone, including offshore islands and territories. Geomorphic features have been identified using the best available bathymetric data with...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Geophysical Grids
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Geophysical_Grids/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Geophysical_Grids/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Geophysical_Grids/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">Web Map Service of Geoscience Australia's national geophysical grids for magnetics, gravity and radiometrics. The service also contains outlines and descriptions of the airborne geophysical surveys used to compile the magnetic and radiometric grids.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Geoscience Australia Rock Properties
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://www.ga.gov.au/geophysics-rockpropertypub-gws/ga_rock_properties_wms/ows?service=WMS&request=GetCapabilities" target="_blank">OGC:WMS</a> | <a href="http://www.ga.gov.au/geophysics-rockpropertypub-gws/ga_rock_properties_wfs/ows?service=WFS&request=GetCapabilities" target="_blank">OGC:WFS</a></p>
+                    <p style="width:330px;">This OGC WMS web service (generated by Geoserver) serves data from the Geoscience Australia Rock Properties database. The database stores the results of measurements of physical properties of rock and regolith specimens, including such properties as mass density, magnetic susceptibility, magnetic remanence and electrical conductivity.  The database also records analytical process information such as method and instrument details where possible.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Gippsland 2D Infill 2015 Marine Seismic Survey, (GA-0352) - High Resolution Bathymetry Grids
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Gippsland_Bathymetry_2D_Infill_2015_GA0352/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Gippsland_Bathymetry_2D_Infill_2015_GA0352/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Gippsland_Bathymetry_2D_Infill_2015_GA0352/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Gippsland_Bathymetry_2D_Infill_2015_GA0352/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">Geoscience Australia conducted a marine seismic survey (GA-0352) over various areas of the Gippsland Basin, between 5th of April to the 24th of April 2015, by the Gardline CGG vessel MV Duke. This service includes all the bathymetry data collected during the survey, with the data also available as a free download from the Geoscience Australia website.
+The aim of the survey was to acquire industry-standard precompetitive 2D seismic data, Multi-bea...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Global Map Project - Australian Base Map
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Global_Map_Project_Australian_Base_Map/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Global_Map_Project_Australian_Base_Map/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Global_Map_Project_Australian_Base_Map/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/services/Global_Map_Project_Australian_Base_Map/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Global_Map_Project_Australian_Base_Map/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a></p>
+                    <p style="width:330px;">This Global Map web service is the Australian contribution towards international efforts to provide globally consistent depiction of geography and environment at 1:1 million map scale by respective National Mapping Organisations. The web service is based on Geoscience Australia's data matching the Global Map specifications and includes layers such as coastlines, roads, airports and land cover.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Great Artesian Basin water table elevation
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Great_Artesian_Basin_water_table_elevation/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Great_Artesian_Basin_Water_Table_Elevation/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Great_Artesian_Basin_water_table_elevation/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/services/Great_Artesian_Basin_water_table_elevation/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This web service displays the elevation of the Great Artesian Basin water table. This dataset and associated metadata can be obtained from www.ga.gov.au, using catalogue number 75830.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Houtman Sub-basin 2D Seismic Survey 2014, (GA0349-Duke10046) - High Resolution Bathymetry Grids
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Houtman_Subbasin_2D_Seismic_Survey_2014_GA0349_Duke10046/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Houtman_Subbasin_2D_Seismic_Survey_2014_GA0349_Duke10046/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Houtman_Subbasin_2D_Seismic_Survey_2014_GA0349_Duke10046/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Houtman_Subbasin_2D_Seismic_Survey_2014_GA0349_Duke10046/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a></p>
+                    <p style="width:330px;">The Houtman Sub basin 2D seismic survey web service display seven seamless bathymetry grids of 15m (shallow water) and 25m (deep water) resolution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Hydrochemistry Analyses
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/geoserver/hydrochem_analyses/wfs?service=WFS&request=GetCapabilities" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/geoserver/hydrochem_analyses/wms?service=WMS&request=GetCapabilities" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This is an Open Geospatial Consortium (OGC) web service providing access to hydrochemistry data (groundwater analyses) obtained from water samples collected from Australian water bores.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Hydrogeology of Australia
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Hydrogeology_of_Australia/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Hydrogeology_of_Australia/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Hydrogeology_of_Australia/MapServer/WmsServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service shows the Principal Hydrogeological Divisions of Australia which was produced from the 1:5,000,000 scale Hydrogeology of Australia map (Jacobsen and Lau, 1987).</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Identify Tool GPServer
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://ga.gov.au/arcgis/rest/services/Maps/Identify_Tool/MapServer" target="_blank">ESRI:ArcGIS:GPServer</a></p>
+                    <p style="width:330px;">The Identify_Tool service includes the key set of infrastructure layers included in the LeastCostPath and ClipAndZip geoprocessing tools. The indentify query uses a dynamic tolerance and returns features including geometry as JSON.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Landcover 25 - Water (Water Observations from Space - WOfS)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://eos.ga.gov.au/geoserver/ows?service=wms&request=GetCapabilities" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This OGC Web Map Service (WMS) provides access to the Water Observations from Space (WOfS) gridded dataset indicating areas where surface water has been observed using the Geoscience Australia's (GA) Landsat 5 and 7 satellite data holdings.  WOfS covers all of mainland Australia and Tasmania but excludes off-shore Territories.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Marine Survey - Geomorphology
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Marine_Survey_Geomorphology/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Marine_Survey_Geomorphology/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Marine_Survey_Geomorphology/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">The Marine Survey Geomorphology Web Map Service contains the local scale (1:10 000) interpreted geomorphology maps available for download on Geoscience Australia's website. These interpreted geomorphology maps have been produced for numerous marine survey programs conducted in Australian mainland and Antarctic waters by both Geoscience Australia and our collaborators. Layers are grouped by survey or region and where available include both the Geo...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Marine Survey Multibeam Backscatter
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Marine_Survey_Multibeam_Backscatter/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Marine_Survey_Multibeam_Backscatter/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Marine_Survey_Multibeam_Backscatter/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The Marine Survey Multibeam Backscatter Web Map Service contains the highest-resolution multibeam backscatter grids available for download on Geoscience Australia's website. These backscatter grids were collected over numerous multibeam survey programs conducted in Australian mainland and Antarctic waters by both Geoscience Australia and our collaborators. Layers are grouped by survey or region and where available include both the Geoscience Aust...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Marine Survey Multibeam Bathymetry
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Marine_Survey_Multibeam_Backscatter/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Marine_Survey_Multibeam_Bathymetry/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Marine_Survey_Multibeam_Bathymetry/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The Marine Survey Multibeam Bathymetry Web Map Service contains the highest-resolution multibeam bathymetry grids available for download on Geoscience Australia's website. These bathymetry grids were collected over numerous multibeam survey programs conducted in Australian mainland and Antarctic waters by both Geoscience Australia and our collaborators. Layers are grouped by survey or region and where available include both the Geoscience Austral...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Multibeam Bathymetric 50m Resolution Colour 2012
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Multibeam_Bathymetric_50m_Colour_2012/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Multibeam_Bathymetric_50m_Colour_2012/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Multibeam_Bathymetric_50m_Colour_2012/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Multibeam_Bathymetric_50m_Colour_2012/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This map service contains the extents of the multibeam bathymetry data held by GA, as at August 2012, which lies within the boundaries of Australia's Extended Continental Shelf, as well as some data in international waters.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Multibeam Bathymetric 50m Resolution Greyscale 2012
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Multibeam_Bathymetric_50m_Greyscale_2012/ImageServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Multibeam_Bathymetric_50m_Greyscale_2012/ImageServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Multibeam_Bathymetric_50m_Greyscale_2012/ImageServer" target="_blank">ESRI:ArcGIS:ImageServer</a> | <a href="http://services.ga.gov.au/gis/services/Multibeam_Bathymetric_50m_Greyscale_2012/ImageServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This map service contains the extents of the multibeam bathymetry data held by GA, as at August 2012, which lies within the boundaries of Australia's Extended Continental Shelf, as well as some data in international waters.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Multibeam Coverage Extents 2015
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Multibeam_Coverage_Extents_2015/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Multibeam_Coverage_Extents_2015/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Multibeam_Coverage_Extents_2015/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service shows the coverage of Geoscience Australia's multibeam bathymetry holdings as it stands in 2015.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Multibeam Coverage Extents 2016
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Multibeam_Coverage_Extents_2016/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Multibeam_Coverage_Extents_2016/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Multibeam_Coverage_Extents_2016/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service shows the coverage of Geoscience Australia's multibeam bathymetry holdings as it stands in 2016.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Multibeam Coverage Extents 2017
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Multibeam_Coverage_Extents_2017/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Multibeam_Coverage_Extents_2017/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Multibeam_Coverage_Extents_2017/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This service shows the coverage of Geoscience Australia’s multibeam bathymetry holdings as it stands in 2017.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          NATMAP Digital Maps 250K - 2008 Edition (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NATMAP_Digital_Maps_250K_2008Edition_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NATMAP_Digital_Maps_250K_2008Edition_WM/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NATMAP_Digital_Maps_250K_2008Edition_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NATMAP_Digital_Maps_250K_2008Edition_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/NATMAP_Digital_Maps_250K_2008Edition_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service contains the NATMAP 1:250,000 scale maps, from the NATMAP Digital Maps 2008 DVD. The large scale single mosaic map covers the entire continent, and is based on the Geocentric Datum of Australia 1994 (GDA94) geographic projection. The maps have been revised using a variety of data sources, including SPOT and Landsat satellite imagery, other government agency information and data supplied by private companies and individuals. The origi...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          NEXIS Agricultural Exposure
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NEXIS_Agricultural_Exposure/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/NEXIS_Agricultural_Exposure/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/NEXIS_Agricultural_Exposure/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/NEXIS_Agricultural_Exposure/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a></p>
+                    <p style="width:330px;">The National Exposure Information System (NEXIS) Agricultural Exposure web service is a set of ABS Statistical Area Level 1 (SA1) and Local Government Areas (LGA) polygon layers providing national agricultural exposure information.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          NEXIS Building Exposure
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NEXIS_Building_Exposure/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NEXIS_Building_Exposure/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NEXIS_Building_Exposure/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/NEXIS_Building_Exposure/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">The National Exposure Information System (NEXIS) Building Exposure web service is a set of ABS Statistical Area Level 1 (SA1) and Local Government Areas (LGA) polygon layers providing national exposure information for residential, commercial and industrial buildings individually.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          NEXIS Residential Population Density
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NEXIS_Residential_Population_Density/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NEXIS_Residential_Population_Density/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NEXIS_Residential_Population_Density/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/NEXIS_Residential_Population_Density/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a></p>
+                    <p style="width:330px;">NEXIS (National Exposure Information System) Residential Population Density web service is a set of five raster layers, representing the density of people across Australia at different scales and resolution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          NOPIMS Offshore Well and Seismic Discovery 2017
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://www.ga.gov.au/arcgis/rest/services/Maps/NOPIMS_Offshore_Well_and_Seismic_Discovery_2017/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://www.ga.gov.au/arcgis/services/Maps/NOPIMS_Offshore_Well_and_Seismic_Discovery_2017/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">3D seismic survey polygon area. The data within this layer only contains high level information regarding the individual surveys, not the actual survey. NOPIMS data is supplied by the petroleum industry. NOPIMS data is only offshore petroleum that belongs to the Commonwealth. A two dimensional (3D) seismic survey is a method of exploration used to capture seismic data beneath Earth's surface. 3D seismic provides continuous information of the subs...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Aviation Facilities
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Aviation_Facilities/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Aviation_Facilities/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Aviation_Facilities/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Aviation_Facilities/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Aviation Facilities Datasets, representing the spatial locations of air traffic services centres, along with all known aviation control towers, major hangars, major fuel depots, major terminals and fire fighting and rescue facilities located within Australia, all complimented with feature attribution</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Dam Walls
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Dam_Walls/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Dam_Walls/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Dam_Walls/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Dam_Walls/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Dam Walls dataset and presents the spatial locations of major dam walls located within Australia, all complemented with feature attribution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Desalination Plants
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Desalination_Plants/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Desalination_Plants/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Desalination_Plants/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Desalination_Plants/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Desalination Plants dataset and presents the spatial locations of all the known major desalination plants within Australia, all complemented with feature attribution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Detention and Correctional Facilities
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Detention_and_Correctional_Facilities/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Detention_and_Correctional_Facilities/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Detention_and_Correctional_Facilities/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Detention_and_Correctional_Facilities/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Detention and Correctional Facilities datasets, representing the spatial locations of all known immigration detention and correctional facilities located within Australia, all complemented with feature attribution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Electricity Infrastructure
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Electricity_Infrastructure/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Electricity_Infrastructure/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Electricity_Infrastructure/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Electricity_Infrastructure/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Major Power Stations, Substations and Transmission Lines datasets.  These datasets present the spatial locations of all known features in Australia.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Foreign Embassies and Consulates
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Foreign_Embassies_Consulates/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Foreign_Embassies_Consulates/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Foreign_Embassies_Consulates/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Foreign_Embassies_Consulates/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Foreign Embassies and Consulates Datasets, representing the spatial locations of all known foreign embassies, high commissions and consulates located within Australia, all complemented with feature attribution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Judicial Courts
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Judicial_Courts/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Judicial_Courts/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Judicial_Courts/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Judicial_Courts/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Judicial Courts dataset and presents the spatial locations of all the known Australian High Courts, Australian Federal Courts and the Australian Federal Circuit Courts located within Australia, all complemented with feature attribution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Liquid Fuel Facilities
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Liquid_Fuel_Facilities/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Liquid_Fuel_Facilities/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Liquid_Fuel_Facilities/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Liquid_Fuel_Facilities/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Liquid Fuel Facilities Datasets, representing the spatial locations of all known liquid fuel depots, refineries, terminals and petrol stations located within Australia, all complemented with feature attribution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Local Government Area Council Offices
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Local_Government_Area_Council_Offices/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Local_Government_Area_Council_Offices/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Local_Government_Area_Council_Offices/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Local_Government_Area_Council_Offices/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Local Government Area Council Offices dataset and presents the spatial locations of all known Local Government Area council office facilities within Australia, all complemented with feature attribution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Maritime Facilities
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Maritime_Facilities/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Maritime_Facilities/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Maritime_Facilities/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Maritime_Facilities/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the Maritime Facilities Datasets, representing the spatial locations of major ports and public ferry terminals located within Australia and its Territories, all complimented with feature attribution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Oil and Gas Infrastructure
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Oil_Gas_Infrastructure/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Oil_Gas_Infrastructure/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Oil_Gas_Infrastructure/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Oil_Gas_Infrastructure/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Oil and Gas Infrastructure datasets. These datasets present the spatial locations of onshore oil and gas pipelines for the transmission of oil and gas within mainland Australia. They also present the location of oil and gas platforms within Australia's territorial waters.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Telephone Exchanges
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Telephone_Exchanges/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Telephone_Exchanges/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Telephone_Exchanges/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Telephone_Exchanges/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Telephone Exchanges dataset and presents the spatial locations of all the known telephone exchange facilities located within Australia, all complemented with feature attribution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          National Wastewater Treatment Facilities
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Wastewater_Treatment_Facilities/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Wastewater_Treatment_Facilities/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Wastewater_Treatment_Facilities/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Wastewater_Treatment_Facilities/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This web service provides access to the National Wastewater Treatment Facilities dataset and presents the spatial locations of all the known wastewater treatment facilities within Australia, all complemented with feature attribution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          NationalMap Colour Topographic Base - World (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NationalMap_Colour_Topographic_Base_World_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NationalMap_Colour_Topographic_Base_World_WM/MapServer/WMSServer?service=WMS&request=GetCapabilities" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NationalMap_Colour_Topographic_Base_World_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/rest/services/NationalMap_Colour_Topographic_Base_World_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a></p>
+                    <p style="width:330px;">This service is produced for the NationalMap project.  It provides seamless topographic colour mapping for the whole of Australia, including the external territories of Cocos (Keeling) Islands, Christmas Island, Norfolk Island and Lord Howe Island.  The service consists of Geoscience Australia data at smaller scales and OpenStreetMap data is used at larger scales.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          NationalMap GreyScale Topographic Base - World (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NationalMap_GreyScale_Topographic_Base_World_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/NationalMap_GreyScale_Topographic_Base_World_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NationalMap_GreyScale_Topographic_Base_World_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/NationalMap_GreyScale_Topographic_Base_World_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service is produced for the National Map project.  It provides seamless topographic greyscale mapping for the whole of Australia, including the external territories of Cocos (Keeling) Islands, Christmas Island, Norfolk Island and Lord Howe Island.  The service consists of Geoscience Australia data at smaller scales and OpenStreetMap data is used at larger scales. The service contains layer scale dependencies.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Northern Australia Infrastructure Facility Act 2016 - Northern Australia Definition
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/NAIF_Act_2016_Northern_Australia_Definition/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/NAIF_Act_2016_Northern_Australia_Definition/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/NAIF_Act_2016_Northern_Australia_Definition/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/NAIF_Act_2016_Northern_Australia_Definition/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service contains the limit and extent of Northern Australia as defined by the Northern Australia Infrastructure Facility Act 2016 (https://www.legislation.gov.au/Details/C2016A00041).</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          OZTemp Interpreted Temperature at 5km Depth
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/OZTemp_Interpreted_Temperature_5km_Depth/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/OZTemp_Interpreted_Temperature_5km_Depth/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/OZTemp_Interpreted_Temperature_5km_Depth/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service is for the 'OZTemp Interpreted Temperature at 5km Depth' image of Australia product. It includes an interpretation of the crustal temperature at 5km depth, based on the OZTemp bottom hole temperature database and additional confidential company data.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          OZTemp Well Temperature Data Extract
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/OzTemp_Well_Data_Extract/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/OzTemp_Well_Data_Extract/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/services/OzTemp_Well_Data_Extract/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service includes well geothermal temperature and location, extracted (from the OZTemp database), and used to create the 'OZTemp Interpreted Temperature at 5km Depth' image of Australia.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Oceanic Shoals Commonwealth Marine Reserve Marine Biodiversity Survey 2012
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Oceanic_Shoals_Survey_2012/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Oceanic_Shoals_Survey_2012/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Oceanic_Shoals_Survey_2012/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Oceanic_Shoals_Survey_2012/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This web service contains information on seabed sediments and geochemistry for samples collected in 2012 from the Oceanic Shoals Commonwealth Marine Reserve in the Timor Sea under the National Environmental Research Program Marine Biodiversity Hub.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Oceanic Shoals Samples
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Oceanic_Shoals_Samples/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Oceanic_Shoals_Samples/MapServer/WMSserver?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Oceanic_Shoals_Samples/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Oceanic_Shoals_Samples/MapServer/WFSserver?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a></p>
+                    <p style="width:330px;">This web service contains sediment and geochemistry data for the Oceanic Shoals Commonwealth Marine Reserve (CMR) in the Timor Sea collected by Geoscience Australia during September and October 2012, on RV Solander (survey GA0339/SOL5650).</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Onshore Seismic Surveys
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Onshore_Seismic_Surveys/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Onshore_Seismic_Surveys/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Onshore_Seismic_Surveys/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">The Onshore Seismic Surveys of Australia Web Map Service depicts all land seismic traverses across the Australian continent and its margins. The service provides access to raw and processed data in SEGY format for each survey. The metadata includes acquisition reports, processing reports, processed images, logs.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Print Service GPServer
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://www.ga.gov.au/gisgp/rest/services/topography/Print_Service/GPServer" target="_blank">ESRI:ArcGIS:GPServer</a></p>
+                    <p style="width:330px;">The Print Service provides PDF map prints via an online interface. This service prints detailed PDF maps, including scale bar and marginalia.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Proximity to Transmission Infrastructure - Lines (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Proximity_To_Transmission_Infrastructure_Lines_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Proximity_To_Transmission_Infrastructure_Lines_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/rest/services/Proximity_To_Transmission_Infrastructure_Lines_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/services/Proximity_To_Transmission_Infrastructure_Lines_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service provides distances to known electricity transmission lines.  The distances are represented as a regular grid (raster) surface or as isolines.  The proximity values are calculated over Australian land mass, and include inland water bodies.  Topography of the terrain and curvature of the earth were not taken into consideration in any calculations i.e. actual traversal distances will be greater than those calculated.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Proximity to Transmission Infrastructure - Substations (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Proximity_To_Transmission_Infrastructure_Substations_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/Proximity_To_Transmission_Infrastructure_Substations_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/services/Proximity_To_Transmission_Infrastructure_Substations_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service provides distances to known electricity transmission substations.  The distances are represented as a regular grid (raster) surface or as isolines.  The values represent the minimum distance, to the nearest transmission substations. The proximity values are calculated over Australian land mass, and include inland water bodies.  Topography of the terrain and curvature of the earth were not taken into consideration in any calculations ...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Route Planning geoprocessing inputs
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://np.ga.gov.au/arcgis/services/Maps/Route_Planning_geoprocessing_inputs/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This service is the processing inputs that are used within the Route Planning geoprocessing service. This service is specifically for use within the Carbon Capture and Storage application.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Scanned 250K Geological Map Index
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Scanned_250k_Geological_Map_Index/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Scanned_250k_Geological_Map_Index/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Scanned_250k_Geological_Map_Index/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">This Web Map Service displays the spatial extents of scanned images of all 1:250 000 scale geological maps of Australia. The service contains information on the edition, publication date, and map publisher, and has links to map images available as 125 DPI and 250 DPI resolution JPG files.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Sea Level
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://www.ga.gov.au/arcgis/services/Maps/Sea_Level/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://www.ga.gov.au/arcgis/services/Maps/Sea_Level/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a></p>
+                    <p style="width:330px;">The sea level service is designed to be used within the Carbon Capture and Storage application for 3D visual representation. It is an elevation service that represents the sea and elevation 0.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Search for MH370 - Shipboard bathymetry and backscatter
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://marine.ga.gov.au/geoserver/marine/wms?request=GetCapabilities" target="_blank">OGC:WMS</a> | <a href="http://marine.ga.gov.au/geoserver/marine/wcs?request=GetCapabilities" target="_blank">OGC:WCS</a> | <a href="http://marine.ga.gov.au/geoserver/marine/wfs?request=GetCapabilities" target="_blank">OGC:WFS</a></p>
+                    <p style="width:330px;">This Web Service contains the processed optimal resolution bathymetry data, 150 m bathymetry data, the 30 m backscatter data, and the 5m sidescan sonar (SSS) and synthetic aperture sonar (SAS) data from Phase 1 and 2 marine surveys conducted by the Governments of Australia, Malaysia and the People’s Republic of China for the search of Malaysian Airlines Flight MH370 in the Indian Ocean. This Multibeam data was acquired from June 2014 to February ...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Sentinel Hotspots
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="https://sentinel.ga.gov.au/geoserver/wfs?service=wfs&request=getcapabilities" target="_blank">OGC:WFS</a> | <a href="http://sentinel.ga.gov.au/geoserver/wms?service=wms&request=getcapabilities" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">The Sentinel Hotspots web service has been developed as part of the Sentinel national bushfire monitoring system.  The service delivers hotspots point data from (a growing number of) satellite-born instruments that detect light in the thermal wavelengths. Typically, the satellite data are processed with a specific algorithm that highlights areas with an unusually high temperature. In principle, however, Hotspots may be sourced from non-satellite ...</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Sentinel-2 Near Real-Time Surface Reflectance
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="https://nrt-au.dea.ga.gov.au/?SERVICE=WMS&REQUEST=GetCapabilities" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. Data is only visible at higher resolutions: when zoomed-out the available areas for that day will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Treaty or Agreement - Australian Maritime Boundary Treaties and Agreements - epoch AMB2014a
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Australian_Maritime_Boundary_Treaties_AMB2014a/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Australian_Maritime_Boundary_Treaties_AMB2014a/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/services/Australian_Maritime_Boundary_Treaties_AMB2014a/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Australian_Maritime_Boundary_Treaties_AMB2014a/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">The service contains all maritime boundaries treaties signed by Australia (NOT ALL ARE IN FORCE). Where the original datum of the treaty is not specified as GDA94, all defined points have been transformation by Geoscience Australia's National Geospatial Reference Systems Section to GDA94.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          Waste Management Facilities
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/Waste_Management_Facilities/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/Waste_Management_Facilities/MapServer/WFSServer?request=GetCapabilities&service=WFS" target="_blank">OGC:WFS</a> | <a href="http://services.ga.gov.au/gis/rest/services/Waste_Management_Facilities/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/Waste_Management_Facilities/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a></p>
+                    <p style="width:330px;">This web service provides access to the Waste Management Facilities dataset and presents the spatial locations of all the known waste management, recycling and reprocessing facilities within Australia, all complemented with feature attribution.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          World Bathymetry Base Map (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://www.ga.gov.au/__data/assets/image/0013/16510/ga-logo.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/services/World_Bathymetry_Base_Map_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/World_Bathymetry_Base_Map_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/rest/services/World_Bathymetry_Base_Map_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">World Bathymetry Base Map. The service includes world bathymetry data, and ocean, country, population and natural features. The information was derived from various sources, including Natural Earth and National Geophysical Data Center (NGDC) ETOPO2 Global 2 Elevations from the September 2001 data. The service contains layer scale dependencies.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          World Bathymetry, Imagery and Hillshade (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="https://ga-ecat-thumbnails.s3.amazonaws.com/102980/102980.jpg"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/World_Bathymetry_Imagery_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/services/World_Bathymetry_Imagery_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/World_Bathymetry_Imagery_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a> | <a href="http://services.ga.gov.au/gis/services/World_Bathymetry_Imagery_WM/MapServer/WCSServer?request=GetCapabilities&service=WCS" target="_blank">OGC:WCS</a></p>
+                    <p style="width:330px;">This service includes world bathymetry, elevation (hillshade), and satellite imagery data, and ocean, country, population and natural features. The information was derived from various sources, including Natural Earth and Landsat Imagery. It is a cached service with a Web Mercator Projection. The service contains layer scale dependencies.</p>
+                 </div>
+             </div>
+    </div>
+     <div class="tile">
+        <div class="flipper">
+                <div class="face front">
+                        <div class="tileTitle" style="text-align:center;font-size:16px;font-weight:bold;">
+                          World Political Boundaries (Web Mercator)
+                        </div>
+                        <div class="tilePic">
+                                <img src="http://services.ga.gov.au/gis/rest/services/World_Political_Boundaries_WM/MapServer/info/thumbnail"/>
+                         </div>
+                 </div>
+                 <div class="face back">
+                    <p  style="text-align:center;width:330px;"><a href="http://services.ga.gov.au/gis/rest/services/World_Political_Boundaries_WM/MapServer/WMTS/1.0.0/WMTSCapabilities.xml" target="_blank">OGC:WMTS</a> | <a href="http://services.ga.gov.au/gis/services/World_Political_Boundaries_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" target="_blank">OGC:WMS</a> | <a href="http://services.ga.gov.au/gis/rest/services/World_Political_Boundaries_WM/MapServer" target="_blank">ESRI:ArcGIS:MapServer</a></p>
+                    <p style="width:330px;">World Political Boundaries. The world boundaries service is comprised of free data sources from around the web. Made with TOPO250K data, NATMAP Topographic Mapping data and Natural Earth data (http://www.naturalearthdata.com/). Contains the Admin 0 - Countries cultural layer - version 3.1.0. It is a cached service with a Web Mercator Projection.</p>
+                 </div>
+             </div>
+    </div>
+       
+               
+      </div>
+	  
+	  
+	  
+   </body>
+	<script>
+
+
+	function hide(btn){ 		
+				
+				var tiles = document.getElementsByClassName("tile");
+				//RE adds all the tiles so that we can filter
+				for (var i = 0, tile; tile = tiles[i]; i++) {
+					tile.style.display = "";
+				}
+				
+				
+				var filter = document.getElementById("filterSelect").value;
+				for (var i = 0, tile; tile = tiles[i]; i++) {
+					if(filter =="All"){
+							  tile.style.display = "";
+							  
+					}else if(filter == "New"){
+						if(tile.children[0].children[0].children[0].textContent.toLowerCase().indexOf(filter.toLowerCase()) == -1){
+							tile.style.display = "none";
+						 }
+					}else if(filter == "Decommission"){
+						if(tile.children[0].children[0].children[0].textContent.toLowerCase().indexOf(filter.toLowerCase()) == -1){
+							tile.style.display = "none";
+						 }
+					}else{
+							
+							if(tile.children[0].children[1].textContent.indexOf(filter) == -1)
+							{
+								tile.style.display = "none";
+							}
+							else{
+								tile.style.display="";
+							}
+					}
+					
+					
+				}
+	 }
+		function search(input){ 
+				var tiles = document.getElementsByClassName("tile");
+				//RE adds all the tiles so that we can filter
+				for (var i = 0, tile; tile = tiles[i]; i++) {
+					tile.style.display = "";
+				}
+				var search = document.getElementById("searchField").value;
+				for (var i = 0, tile; tile = tiles[i]; i++) {
+					 if(tile.children[0].children[1].textContent.toLowerCase().search(search.toLowerCase()) == -1  && tile.children[0].children[0].children[0].textContent.toLowerCase().search(search.toLowerCase()) == -1 ){
+						tile.style.display = "none";
+					 }
+					 else{
+						tile.style.display="";
+					 }
+				}
+				
+		}
+		function reset(){
+		 var tiles = document.getElementsByClassName("tile");
+		  for (var i = 0, tile; tile = tiles[i]; i++) {
+				   tile.style.display="";
+			}
+			document.getElementById("searchField").value ="";
+		}
+		function subscribe(){
+			var email = document.getElementById("emailInput").value;
+			var url = "https://dev-ga.fmecloud.com/fmejobsubmitter/Web%20Services/ServiceDependencyEmailCollecter.fmw?email="+email;
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open( "GET", url, false ); // false for synchronous request
+			xmlHttp.send( null );
+			alert("Your email account has been registered. You will receive notifications from time to time about new or decommissioned services.");
+			document.getElementById("emailInput").value ="";
+		}
+	</script>
+</html>
+
