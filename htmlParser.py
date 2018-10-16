@@ -68,8 +68,8 @@ def testData():
     #         ''<body><h1>Parse me!</h1></body></html>'
 
     # CHOOSE ONE real html test
-    f = open(home_directory + r'\_in\aus_geoscience_services.html', 'r')
-    # f = open(home_directory + r'\_in\spatialservices_finance_nsw_gov_au.html', 'r')
+    # f = open(home_directory + r'\_in\aus_geoscience_services.html', 'r')
+    f = open(home_directory + r'\_in\spatialservices_finance_nsw_gov_au.html', 'r')
     result = f.read()
 
     return result
