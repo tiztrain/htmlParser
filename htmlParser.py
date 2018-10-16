@@ -30,11 +30,14 @@ class MyHTMLParser(HTMLParser):
             # THIS CODE EXTRACTS THE WEB SERVICES LINKS
             # lines with the tag 'a' and the attribute 'href' are the web service links
             if tag == "a" and attr[0] == 'href':
-                print(attr[1])
+                # print(attr[1])
                 # if the link contains '?' it and everything to the right of it will be removed
                 if '?' in attr[1]:
                     ws_link = attr[1][:attr[1].find('?')]
-                    print(ws_link)
+                    # print(ws_link)
+                    # casefold() is used to state that it does not matter what case the string is in
+                    if 'server' in ws_link.casefold():
+                        print(ws_link)
 
     # not needed yet but maybe for extracting titles and other attributes
 """
@@ -57,24 +60,27 @@ class MyHTMLParser(HTMLParser):
 
 
 
-def testData(input):
-    # test data options
+def testData():
+    # TEST OPTIONS
+
+    # simple test
     # result = '<html><head><title>Test</title></head>'' \
     #         ''<body><h1>Parse me!</h1></body></html>'
-    result = input
+
+    # CHOOSE ONE real html test
+    f = open(home_directory + r'\_in\aus_geoscience_services.html', 'r')
+    # f = open(home_directory + r'\_in\spatialservices_finance_nsw_gov_au.html', 'r')
+    result = f.read()
+
     return result
 
 
 
 def main():
 
-    # read open file and read
-    f = open(home_directory + r'\_in\aus_geoscience_services.html', 'r')
-    contents = f.read()
-
     # create HTMLParser object
     parser = MyHTMLParser()
-    parser.feed(testData(contents))
+    parser.feed(testData())
 
 
 
