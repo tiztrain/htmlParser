@@ -13,7 +13,7 @@ class MyHTMLParser(HTMLParser):
 
     # this function will extract the the details I require
     def handle_starttag(self, tag, attrs):
-
+        # self.handle_data()
         # # print statements to be able to break down the html code
         # """print the tag"""
         # print("Encountered a start tag     :", tag)
@@ -48,9 +48,8 @@ class MyHTMLParser(HTMLParser):
     # def handle_endtag(self, tag):
     #     print("Encountered an end tag      :", tag)
     #
-    # def handle_data(self, data):
-    #     print("Encountered some data       :", data)
-
+    def handle_data(self, data):
+        print("Encountered some data       :", data)
 
     #
     # def handle_startendtag(self, tag, attrs):
