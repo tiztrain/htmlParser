@@ -48,8 +48,8 @@ class MyHTMLParser(HTMLParser):
     # def handle_endtag(self, tag):
     #     print("Encountered an end tag      :", tag)
     #
-    def handle_data(self, data):
-        print("Encountered some data       :", data)
+    #def handle_data(self, data):
+     #   print("Encountered some data       :", data)
 
     #
     # def handle_startendtag(self, tag, attrs):
